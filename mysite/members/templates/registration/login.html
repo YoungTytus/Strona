@@ -1,0 +1,12 @@
+{% extends 'space.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<h1>Login</h1>
+<br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button class="button-89" role="button">Submit</button>
+</form>
+
+{% endblock %}

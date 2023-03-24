@@ -1,0 +1,16 @@
+{% extends 'space.html' %}
+{% block title %} Usuń post {% endblock %}
+{% block content %}
+{% if user.is_authenticated  %}
+<h1>Usuń post</h1>
+
+<h3>Usuń: {{post.title}}</h3>
+<form method="post">
+    {% csrf_token %}
+    <button class="button-89" role="button">Submit</button>
+</form>
+{% else %}
+    <p style="color: #04AA6D">You're not allowed here!</p>
+{% endif %}
+
+{% endblock %}

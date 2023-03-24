@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}404-Blog{% endblock %}
+{% block content %}
+<section class="body">
+ <div class="control">
+   <h2 style="text-transform: capitalize">{{ cats }}:</h2>
+ <div class="list">
+ <ul>
+  {% for post in category_post %}
+ <li><a href="{% url 'article' post.pk %}">{{post.title}}</a> <small style="color: grey">{{post.post_date|date:"d/m/Y"}}</small></li>
+ {% endfor %}
+ </ul>
+  </div>
+ </div>
+</section>
+
+{% endblock %}

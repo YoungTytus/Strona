@@ -1,0 +1,17 @@
+{% extends 'space.html' %}
+{% block title %} Zaaktualizuj post {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated  %}
+<h1>Zaaktualizuj post</h1>
+<br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+    <button class="button-89" role="button">Submit</button>
+</form>
+{% else %}
+    <p style="color: #04AA6D">You're not allowed here!</p>
+{% endif %}
+{% endblock %}
