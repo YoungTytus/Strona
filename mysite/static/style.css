@@ -30,12 +30,11 @@ header{
 }
 .navbar{
     width: 100%;
-    height: 60px;
+    height: 80px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .navbar .logo p{
     font-size: 1.5rem;
@@ -47,9 +46,12 @@ header{
     display: flex;
     gap: 2rem;
 }
+.links a{
+    font-size: 1.3rem;
+}
 .navbar .toggle_btn{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     display: none;
 }
@@ -60,7 +62,7 @@ header{
     border: none;
     outline: none;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -94,7 +96,7 @@ header{
   background-color: #04AA6D;
 }
 ::-webkit-scrollbar-track {
-  background-color: #fff;
+  background-color: inherit;
 }
 .tite_list{
     text-align: center;
@@ -220,4 +222,35 @@ header{
 }
 .list{
     padding-left: 5%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+}
+
+.image {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .image {
+    max-width: 100%;
+  }
 }

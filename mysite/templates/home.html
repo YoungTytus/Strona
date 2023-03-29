@@ -12,17 +12,17 @@
     <br>
 {% if object_list|length < 11 %}
     {% if object_list|length == 0%}
-        <h4>Niedługo pierwszy post zostanie opublikowany</h4>
+        <h4>First post will be published soon</h4>
     {% elif object_list|length == 1%}
-        <h4>Ostatni post</h4>
+        <h4>Latest post</h4>
     {% else %}
-        <h4>Ostatnie posty</h4>
+        <h4>Latest posts</h4>
     {% endif %}
 {% else %}
-    <h4><h4>Ostatnie posty</h4></h4>
+    <h4><h4>Latest posts</h4></h4>
 {% endif %}
 </div>
-<div class="service-container">
+<div class="service-container" style="width: 100%;">
  {% for post in object_list %}
     {% if forloop.counter0 < 6 %}
         <div class="service">
@@ -37,4 +37,5 @@
 {% endfor %}
 </div>
 </section>
+
 {% endblock %}

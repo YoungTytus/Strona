@@ -38,3 +38,17 @@ class DeletePost(DeleteView):
 def CategoryView(requests, cats):
     category_post = Post.objects.filter(category=cats)
     return render(requests, 'categories.html', {'cats': cats, 'category_post': category_post})
+
+
+def AboutView(requests):
+    return render(requests, 'about.html')
+
+
+class PostsView(ListView):
+    model = Post
+    template_name = 'posts.html'
+    ordering = ['-id']
+
+
+def error_404_view(request, exception):
+    return render(request, '404.html', {})

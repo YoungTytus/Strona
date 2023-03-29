@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Posts {% endblock %}
+{% block content %}
+<section class="body" style="padding-left: 20%; padding-top: 2%">
+ <div class="control">
+ <div class="list">
+ <ul>
+  {% for post in object_list %}
+     <li><a href="{% url 'article' post.pk %}"><b>{{post.title}}</b></a> <small style="color: grey">{{post.post_date|date:"d/m/Y"}}
+         <a href="{% url 'category' post.category%}">{{post.category}}</a></small></li>
+ {% endfor %}
+ </ul>
+  </div>
+ </div>
+</section>
+{% endblock %}

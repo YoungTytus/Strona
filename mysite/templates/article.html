@@ -9,8 +9,8 @@
         <sub><small><a href="{% url 'update_post' post.pk %}">edit</a>
         <a href="{% url 'delete_post' post.pk %}">delete</a></small></sub>
         {%endif%}</h3>
-    <p><small><b>Autor: {{post.author.first_name}} {{post.author.last_name}}</b> <br>Data: {{post.post_date|date:"d/m/Y"}}
-        <br>Kategoria: <a href="{% url 'category' post.category%}">{{post.category}}</a></small></p>
+    <p><small><b>Author: {{post.author.first_name}</b> <br>Date: {{post.post_date|date:"d/m/Y"}}
+        <br>Category: <a href="{% url 'category' post.category%}">{{post.category}}</a></small></p>
     <hr>
 </div>
 <div class="post_body" >

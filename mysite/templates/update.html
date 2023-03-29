@@ -1,9 +1,9 @@
 {% extends 'space.html' %}
-{% block title %} Zaaktualizuj post {% endblock %}
+{% block title %} Edit post {% endblock %}
 {% block content %}
 
 {% if user.is_authenticated  %}
-<h1>Zaaktualizuj post</h1>
+<h1>Edit post</h1>
 <br>
 <form method="post">
     {% csrf_token %}

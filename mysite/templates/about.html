@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} About {% endblock %}
+{% block content %}
+{% load static %}
+<section class="container" style="padding-top: 3%">
+  <div class="text">
+    <p>Hi, I'm <b>Kamil</b>, a programmer who loves capitalism and travel. I enjoy working with new technologies and exploring different cultures around the world. I believe that personal growth is key to success, both in programming and in life, and I'm always looking for new challenges and opportunities to learn</p>
+  </div>
+  <div class="image">
+    <img src="{% static 'about.jpg'%}" alt="Obrazek" width="90%" >
+  </div>
+</section>
+{% endblock %}

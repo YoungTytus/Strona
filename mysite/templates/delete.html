@@ -2,9 +2,9 @@
 {% block title %} Usuń post {% endblock %}
 {% block content %}
 {% if user.is_authenticated  %}
-<h1>Usuń post</h1>
+<h1>Delete</h1>
 
-<h3>Usuń: {{post.title}}</h3>
+<h3>Delete: {{post.title}}</h3>
 <form method="post">
     {% csrf_token %}
     <button class="button-89" role="button">Submit</button>
